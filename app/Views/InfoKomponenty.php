@@ -5,20 +5,23 @@
 <div class="container">
 <div class="p3">
     <div class = "row">
+    <div class = "col-xxl-3 col-m-1 col-sm-0 col-lg-2">
+    </div>
     <?php 
-        foreach ($info as $row){
+        
     ?>
-        <div class = "col-xxl-3 col-sm-12 col-lg-6">
-            <div class="card m-5 bg-secondary">
+        <div class = "col-xxl-6 col-m-10 col-sm-12 col-lg-8">
+            <div class="card m-2 bg-secondary">
             <div class="card-body">
-            <p class="card-text text-center"> Název: <?= $row->nazev ?></p>
-            <p class="card-text text-center"> <?= $row->pic ?></p>
-            <p class="card-text text-center"> Odkaz: <?= $row->odkaz ?></p>
-            <p class="card-text text-center"> Název výrobce: <?= $row->nazev ?></p>
+            <p class="card-text text-center"> Název: <?= $info->nazev ?></p>
+            <p class="card-text text-center"> <img style="width:300px"src= "<?= base_url('obrazky/komponenty/komponenty/'. $info->pic) ?>"></p>
+            <p class="card-text text-center"> Odkaz: <?= $info->odkaz ?></p>
+            <p class="card-text text-center"> Název výrobce: <?= $info->vyrobce ?></p>
             </div>
             </div>
         </div>
-    <?php } ?>
+        <div class = "col-xxl-3 col-m-1 col-lg-2">
+    </div>
 
 </div>
 </div>

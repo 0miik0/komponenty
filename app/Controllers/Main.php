@@ -29,8 +29,8 @@ class Main extends BaseController
         echo view('VypisKomponent', $data);
     }
     public function getInfo($idkomponent){
-        $data['info'] = $this->komponent->where('id', $idkomponent)->findAll();
-        //$data['vyrobce'] = $this->komponent->where('idVyrobce', $idvyrobce)->findAll();
+        $data['info'] = $this->komponent->join('vyrobce','vyrobce.idVyrobce=komponent.vyrobce_id', 'inner')->find($idkomponent);
+        //var_dump($data['info']);
         echo view('InfoKomponenty', $data);
     }
 }
