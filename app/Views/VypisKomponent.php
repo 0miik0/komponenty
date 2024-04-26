@@ -2,6 +2,27 @@
 <?=$this->extend("layout/template");?>
 <?=$this->section("content");?>
 
+<style>
+.pagination {
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {background-color: #6495ED;}
+</style>
+
 <div class="container">
 <div class="p3">
     <div class = "row">
@@ -16,6 +37,12 @@
             </div>
         </div>
     <?php } ?>
+
+    <footer>
+        <div class="d-flex">
+            <div class="mx-auto text-center pagination a"> <?= $pager->links(); ?> </div>
+        </div>
+    </footer>
 
 </div>
 </div>
