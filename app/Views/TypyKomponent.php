@@ -10,7 +10,7 @@
     ?>
         <div class = "col-xxl-3 col-sm-12 col-lg-6">
             <div class="card m-5 bg-secondary">
-            <h4 style="height:60px mt-2" class="card-title text-center mt-2 "> <?= anchor('vypisKomponent/'.$row->idKomponent, $row->typKomponent) ?></h4>
+            <h4 style="height:60px mt-2" class="card-title text-center mt-2 "> <?= anchor('vypisKomponent/'.$row->url, $row->typKomponent) ?></h4>
             <div class="card-body">
             </div>
             </div>

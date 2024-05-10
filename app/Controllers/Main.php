@@ -26,8 +26,10 @@ class Main extends BaseController
         //var_dump($data['typy']);
         echo view('TypyKomponent', $data);
     }
-    public function getKomponenty($idtypykomponent){
+    public function getKomponenty($typKomponent_url){
        $pagination = $this->config->pagination;
+
+       $idtypykomponent = $this->typKomponent->where('url', $typKomponent_url)->findAll()[0]->idKomponent;
 
         $data['komponenty'] = $this->komponent->where('typKomponent_id',$idtypykomponent)->paginate($pagination);
         $data ['pager'] = $this->komponent->pager;
