@@ -44,7 +44,7 @@
         </div>
     </footer>
 
-    <h4 style="height:60px mt-2" class="card-title text-center mt-2 "> <?= anchor() ?></h4>
+    <h4 style="height:60px mt-2" class="card-title text-center mt-2 "> <?= anchor('UpravitStrankovani/', 'Edit pagination') ?></h4>
 
 </div>
 </div>

@@ -17,8 +17,6 @@
         </div>
     <?php } ?>
 
-    
-
 </div>
 </div>
 <?=$this->endSection();?>
