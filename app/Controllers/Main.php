@@ -41,7 +41,4 @@ class Main extends BaseController
         //var_dump($data['info']);
         echo view('InfoKomponenty', $data);
     }
-    public function getUpravitStrankovani(){
-        echo view('UpravitStrankovani');
-    }
 }
