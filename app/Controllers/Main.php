@@ -41,4 +41,20 @@ class Main extends BaseController
         //var_dump($data['info']);
         echo view('InfoKomponenty', $data);
     }
+
+    public function addCategory(){
+        return view('PridejKategorii');
+    }
+    public function createCategory(){
+        $categoryName = $this->request->getPost('category_name');
+    
+        $data = [
+            'idKomponent' => '',
+            'typKomponent' => $categoryName,
+            'url' => ''
+        ];
+        
+        $this->Category->save($data);
+        return redirect()->route('/');
+    }
 }

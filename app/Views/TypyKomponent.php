@@ -5,6 +5,7 @@
 <div class="container">
 <div class="p3">
     <div class = "row">
+    <a href="<?= base_url('addCategory') ?>" class="btn btn-primary">Přidej kategorii</a>
     <?php 
         foreach ($typy as $row){
     ?>
